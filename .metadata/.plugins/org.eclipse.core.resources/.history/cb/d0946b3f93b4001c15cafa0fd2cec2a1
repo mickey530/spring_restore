@@ -1,0 +1,5 @@
+package com.ict.time.mapper;
+
+public interface BoardMapper {
+
+}

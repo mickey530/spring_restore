@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+/Users/mickey530/spring_1/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3327849041.index
+/SpringBoard/src/main/java
+/Users/mickey530/spring_1/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1241477493.index
+/SpringBasic/src/main/java
+/Users/mickey530/spring_1/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1170294029.index
+/test/src/main/java

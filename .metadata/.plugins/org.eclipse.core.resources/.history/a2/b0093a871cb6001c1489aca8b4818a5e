@@ -1,0 +1,30 @@
+package com.ict.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ict.mapper.BoardMapper;
+
+// 컨트롤러가 컨트롤러 기능을 할 수 있도록 처리해주세요.
+@Controller
+public class BoardController {
+	
+	// 전체 회원을 보려면, 회원목록을 들고오는 메서드를 실행해야 하고
+	// 그러면, 그 메서드를 보유하고 있는 클래스를 선언하고 주입해줘야 합니다.
+	// DB 접근시 사용하는 BoardMapper를 선언하고 주입해주세요.
+	
+	@Autowired
+	private BoardMapper boardMapper;
+	
+	// 전체 목록을 볼 수 있는 페이지인 boardList.jsp로 연결되는 
+	// /boardList 주소를 get 방식으로 선언해주세요.
+	// 메서드 내부에서는 boardMapper의 .getAllList를 호출해 그 결과를 바인딩합니다.
+	
+	@GetMapping(value="/boardList")
+	public String boardList() {
+		boardMapper.getList()
+;		
+		return "boardList";
+	}
+}

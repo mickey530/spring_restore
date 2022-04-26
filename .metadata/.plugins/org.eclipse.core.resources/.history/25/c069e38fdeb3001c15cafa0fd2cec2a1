@@ -1,0 +1,6 @@
+package com.ict.persistence;
+
+@RunWith(SpringJUnit4Class)
+public class TimeMapperTests {
+
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- Library객체를 빈 컨테이터 내부에 생성해보겠습니다.
+	book1, library1을 먼저 생성해주세요. -->
+	<bean id="book1" class="com.ict.controller.di.classfile.Book"></bean>
+	<bean id="library1" class="com.ict.controller.di.classfile.Library">
+		<!-- setter 이름이 setBook이므로 입력받을 요소인 name="book"
+		ref(넣어줄 객체명)="book1" -->
+		<property name="book" ref="book1"></property>
+	</bean>
+</beans>
