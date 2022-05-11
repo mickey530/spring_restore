@@ -27,4 +27,14 @@
 		DELETE FROM reply_tbl
 		WHERE rno = #{rno}
 	</delete>
+	
+	<delete id="deleteBoardReplies">
+		DELETE FROM reply_tbl
+		WHERE bno = #{bno}
+	</delete>
+	
+	<select id="getBno" resultType="long">
+		SELECT bno FROM reply_tbl
+			WHERE rno = #{rno}
+	</select>
 </mapper>

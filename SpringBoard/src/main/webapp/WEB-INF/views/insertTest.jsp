@@ -23,7 +23,7 @@
 		width: 300px;
 		height: 100px;
 		background-color: whitesmoke;
-		position: absolute;
+		position: fixed;
 		top: 50%;
 		left: 50%;
 		margin-top: -50px;

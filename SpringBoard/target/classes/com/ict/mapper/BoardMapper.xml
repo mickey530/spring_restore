@@ -102,6 +102,13 @@
 			bno > 0
 		]]>
 	</select>
+	
+	<!-- 댓글 증감량 -->
+	<update id="updateReplyCount">
+		UPDATE board_tbl 
+			SET 
+		replycount = replycount + #{amount} WHERE bno = #{bno}
+	</update>
 
 </mapper>
 

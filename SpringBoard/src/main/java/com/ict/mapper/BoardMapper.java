@@ -38,6 +38,9 @@ public interface BoardMapper {
 	// 글 개수 => 정수 값을 조회하기 때문에 int 리턴입니다.
 	public int countPageNum(SearchCriteria cri);
 	
+	// 댓글 증감
+	public void updateReplyCount(@Param("bno") Long bno, @Param("amount") int amount);
+	
 	
 }
 

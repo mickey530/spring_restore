@@ -6,6 +6,9 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <meta charset="UTF-8">
+<style>
+
+</style>
 <title>Insert title here</title>
 </head>
 <body>
@@ -25,7 +28,7 @@
 				<c:forEach var="board" items="${boardList }">
 					<tr>
 						<td>${board.bno }</td>
-						<td><a href="/board/boardDetail/${board.bno }?pageNum=${pageMaker.cri.pageNum}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}"> ${board.title }</a></td>
+						<td><a href="/board/boardDetail/${board.bno }?pageNum=${pageMaker.cri.pageNum}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}"> ${board.title } [${board.replyCount }]</a></td>
 						<td>${board.writer }</td>
 						<td>${board.regdate }</td>
 						<td>${board.updatedate }</td>
@@ -33,7 +36,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<a href="/boardInsert" class="btn btn-success">글쓰기</a><br/>
+		<a href="/board/boardInsert" class="btn btn-success">글쓰기</a><br/>
 		${pageMaker }<br/>
 			
 		  <!-- 이전 페이지 버튼 보일지 결정하는 부분 -->

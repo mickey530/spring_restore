@@ -16,4 +16,8 @@ public interface ReplyMapper {
 	public void update(ReplyVO vo);
 
 	public void delete(Long rno);
+	
+	public void deleteBoardReplies(Long bno);
+	
+	public Long getBno(Long rno);
 }
