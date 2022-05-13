@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,6 +38,7 @@ public class BoardController {
 	// 전체 글 목록을 볼 수 있는 페이지인 boardList.jsp로 연결되는
 	// /boardList 주소를 get방식으로 선언해주세요.
 	// 메서드 내부에서는 boardMapper의 .getAllList를 호출해 그 결과를 바인딩합니다.
+	@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
 	@GetMapping("/boardList")
 	// @RequestParam(name="사용할변수명", defaultValue="지정하고싶은기본값") 변수 왼쪽에 저렇게 붙여주면 처리완료.
 	// @PathVariable의 경우 defaultValue를 직접 줄 수 없으나, required=false를 이용해 필수입력을 안받게 처리한 후

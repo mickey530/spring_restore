@@ -8,15 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>사용자 생성 로그인 폼</h1>
+	<h1>로그아웃 페이지</h1>
 	<h2><c:out value="${error }"></c:out></h2>
 	<h2><c:out value="${logout }"></c:out></h2>
 	
-	<form action="/login" method="post">
-		ID : <input type="text" name="username" value="admin"><br>
-		PW : <input type="text" name="password" value="admin"><br/>
-		자동로그인 : <input type="checkbox" name="remember-me"><br/>
-		<input type="submit" value="로그인">
+	<form action="/customLogout" method="post">
+		<input type="submit" value="로그아웃">
  		<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }">			
 	</form>
 	
